@@ -17,7 +17,7 @@ var Person = {
     budget: 50
 };
 function priceChange(price){
-    price += randomNumber(-25,25)/100;
+    price += randomNumber(-25,2500)/100;
     if (price > 999.99){
         price = 999.99;
     }else if (price < .50){
