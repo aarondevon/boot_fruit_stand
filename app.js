@@ -14,7 +14,7 @@ var Person = {
     oranges: [],
     bananas: [],
     pears: [],
-    budget: 50
+    budget: 2000
 };
 function priceChange(price){
     price += randomNumber(-25,2500)/100;
@@ -72,7 +72,7 @@ $(document).ready(function(){
             Person[fruitId].shift();
             Person.budget += Market[fruitId];
             Person.budget = Math.round(Person.budget * 100) / 100;
-            $("#userInfo").html("<p>Budget: $" + Person.budget + "</p><p>Pigs in Boots: " + Person.apples.length + " at an average price of $" + avgArray(Person.apples) + "</p>" + "<p>Oranges: " + Person.oranges.length + " at an average price of $" + avgArray(Person.oranges) + "</p>" + "<p>Bananas: " + Person.bananas.length + " at an average price of $" + avgArray(Person.bananas) + "</p>" + "<p>Pears: " + Person.pears.length + " at an average price of $" + avgArray(Person.pears) + "</p>");
+            $("#userInfo").html("<p>Budget: $" + Person.budget + "</p><p>Pigs in Boots: " + Person.apples.length + " at an average price of $" + avgArray(Person.apples) + "</p>" + "<p>Pigs in Cowboy Hats: " + Person.oranges.length + " at an average price of $" + avgArray(Person.oranges) + "</p>" + "<p>Pigs and Cups: " + Person.bananas.length + " at an average price of $" + avgArray(Person.bananas) + "</p>" + "<p>Pigs With Wheels: " + Person.pears.length + " at an average price of $" + avgArray(Person.pears) + "</p>");
         }else{
             alert("You can't sell what you don't have!");
         }
